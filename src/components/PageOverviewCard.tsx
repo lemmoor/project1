@@ -9,12 +9,12 @@ type PageOverviewCardProps = {
 
 function PageOverviewCard({ title, text, imgSrc, url }: PageOverviewCardProps) {
   return (
-    <div className="card card-bordered w-96 bg-base-300 shadow-xl">
+    <div className="card card-bordered bg-base-300 shadow-xl w-full max-w-sm">
       <figure>
         <img
           src={imgSrc}
           alt=""
-          className="max-h-72 object-cover object-bottom w-full"
+          className=" object-cover max-h-56 object-bottom w-full"
         />
       </figure>
       <div className="card-body">

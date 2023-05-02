@@ -10,7 +10,7 @@ function PagesOverview() {
       <h2 className="font-bold text-center text-3xl my-8 md:text-5xl">
         Discover more
       </h2>
-      <div className="flex items-center justify-center flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-stretch">
+      <div className="flex items-center justify-center flex-col gap-6 flex-shrink md:flex-row md:max-xl:flex-wrap md:items-stretch ">
         <PageOverviewCard
           title="Vocabulary"
           text="Explore the differences between American and British English with this comprehensive guide to vocabulary variations."
