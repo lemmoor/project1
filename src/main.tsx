@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import './index.css';
 import Nav from './components/Nav';
+import Dictionary from './pages/Dictionary';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -11,6 +12,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/dictionary" element={<Dictionary />} />
       </Routes>
     </Router>
   </React.StrictMode>
