@@ -1,8 +1,31 @@
-export interface WordResponce {
+export interface CleanedDictionary {
+  word: string;
+  phonetics: Audio[];
+  phonetic: string;
+  meanings: Meaning[];
+}
+
+export interface Audio {
+  audio: string;
+  locale: string;
+  text: string;
+}
+
+export interface Meaning {
+  partOfSpeech: string;
+  definitions: Definition[];
+}
+
+export interface Definition {
+  definition: string;
+  example?: string;
+}
+
+export interface WordResponse {
   word: string;
   phonetic: string;
   phonetics: Phonetic[];
-  meanings: Meaning[];
+  meanings: ApiMeaning[];
   license: License;
   sourceUrls: string[];
 }
@@ -12,18 +35,15 @@ export interface License {
   url: string;
 }
 
-export interface Meaning {
-  partOfSpeech: string;
-  definitions: Definition[];
+export interface ApiMeaning extends Meaning {
   synonyms: string[];
   antonyms: string[];
+  definitions: ApiDefinition[];
 }
 
-export interface Definition {
-  definition: string;
+export interface ApiDefinition extends Definition {
   synonyms: string[];
   antonyms: string[];
-  example?: string;
 }
 
 export interface Phonetic {
