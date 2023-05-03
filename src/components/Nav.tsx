@@ -32,13 +32,16 @@ function Nav() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/words">Words</NavLink>
+              <NavLink to="/vocabulary">Vocabulary</NavLink>
             </li>
             <li>
-              <NavLink to="/quiz">Quiz</NavLink>
+              <NavLink to="/idioms">Idioms</NavLink>
             </li>
             <li>
-              <NavLink to="/dict">Dictionary</NavLink>
+              <NavLink to="/quizzes">Quiz</NavLink>
+            </li>
+            <li>
+              <NavLink to="/dictionary">Dictionary</NavLink>
             </li>
           </ul>
         </div>

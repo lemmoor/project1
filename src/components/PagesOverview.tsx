@@ -33,7 +33,7 @@ function PagesOverview() {
           title="Dictionary"
           text="Find the definitions and pronunciations of English words and phrases with our online dictionary."
           imgSrc={dictionaryImg}
-          url="/quizzes"
+          url="/dictionary"
         />
       </div>
     </section>
