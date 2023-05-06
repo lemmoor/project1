@@ -8,15 +8,15 @@ export default {
     extend: {},
   },
   plugins: [daisyui],
-  daisyui: {
-    themes: [
-      {
-        light: {
-          ...themes['[data-theme=halloween]'],
-          primary: '#ff595e',
-          'primary-focus': '#A22A2E',
-        },
-      },
-    ],
-  },
+  // daisyui: {
+  //   themes: [
+  //     {
+  //       light: {
+  //         ...themes['[data-theme=halloween]'],
+  //         primary: '#ff595e',
+  //         'primary-focus': '#A22A2E',
+  //       },
+  //     },
+  //   ],
+  // },
 };
