@@ -14,15 +14,11 @@ export default function cleanApiData(data: WordResponse) {
     if (item.audio !== '') {
       dictionary.phonetics.push({
         audio: item.audio,
-        locale: item.audio.substring(
-          item.audio.length - 6,
-          item.audio.length - 4
-        ),
+        locale: item.audio
+          .substring(item.audio.length - 6, item.audio.length - 4)
+          .toUpperCase(),
         text: item.text,
       });
-      if (dictionary.phonetic === '' && item.text !== '') {
-        dictionary.phonetic = item.text;
-      }
     }
   });
 
