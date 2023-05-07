@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import './index.css';
 import Nav from './components/Nav';
 import Dictionary from './pages/Dictionary';
+import Idioms from './pages/Idioms';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/dictionary" element={<Dictionary />} />
+        <Route path="/idioms" element={<Idioms />} />
       </Routes>
     </Router>
   </React.StrictMode>
