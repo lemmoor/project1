@@ -9,16 +9,19 @@ export interface Audio {
   audio: string;
   locale: string;
   text: string;
+  key: number;
 }
 
 export interface Meaning {
   partOfSpeech: string;
   definitions: Definition[];
+  key: number;
 }
 
 export interface Definition {
   definition: string;
   example?: string;
+  key: number;
 }
 
 export interface WordResponse {

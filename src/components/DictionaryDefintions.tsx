@@ -12,15 +12,10 @@ function DictionaryDefinitions({ definitions }: DictionaryDefinitionsProps) {
   function showList(list: Definition[]) {
     return list.map((d) => {
       return (
-        <>
-          <p key={Date.now() * Math.random()}>{d.definition}</p>
-          <p
-            key={Date.now() * Math.random()}
-            className="text-info-content italic ml-2"
-          >
-            {d.example}
-          </p>
-        </>
+        <div key={d.key}>
+          <p>{d.definition}</p>
+          <p className="text-info-content italic ml-2">{d.example}</p>
+        </div>
       );
     });
   }

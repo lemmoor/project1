@@ -50,7 +50,7 @@ function Dictionary() {
       <div className="max-w-xl mx-auto relative">
         <input
           type="text"
-          placeholder="Search for a word"
+          placeholder="Search"
           className="input input-bordered w-full pr-12"
           onChange={(e) => {
             setSearchedWord(e.target.value);
@@ -77,8 +77,8 @@ function Dictionary() {
             />
           </svg>
         </button>
-        {isLoading && <p>Loading..</p>}
-        {err && <p>{err}</p>}
+        {isLoading && <p className="text-center mt-4">Loading..</p>}
+        {err && <p className="text-center mt-4">{err}</p>}
       </div>
       {data ? (
         <section className="my-4">
@@ -88,7 +88,7 @@ function Dictionary() {
               <Pronunciation
                 audioSrc={p.audio}
                 lang={p.locale}
-                key={Date.now() + Math.random()}
+                key={p.key}
                 text={p.text}
               />
             ))}
@@ -97,7 +97,7 @@ function Dictionary() {
           <div>
             {data.meanings.map((meaning) => {
               return (
-                <div key={Date.now() * Math.random()}>
+                <div key={meaning.key}>
                   <p className="font-bold mt-4 text-lg">
                     {meaning.partOfSpeech}
                   </p>
@@ -109,9 +109,12 @@ function Dictionary() {
           </div>
         </section>
       ) : (
-        <p className="text-center mt-4">
-          Search for a word to get its definitions and pronunciations
-        </p>
+        !isLoading &&
+        !err && (
+          <p className="text-center mt-4">
+            Search for a word to get its definitions and pronunciations
+          </p>
+        )
       )}
     </main>
   );

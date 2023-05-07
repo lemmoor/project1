@@ -18,6 +18,7 @@ export default function cleanApiData(data: WordResponse) {
           .substring(item.audio.length - 6, item.audio.length - 4)
           .toUpperCase(),
         text: item.text,
+        key: Math.random(),
       });
     }
   });
@@ -26,11 +27,13 @@ export default function cleanApiData(data: WordResponse) {
     const meaning: Meaning = {
       definitions: [],
       partOfSpeech: item.partOfSpeech,
+      key: Math.random(),
     };
     item.definitions.forEach((d) => {
       meaning.definitions.push({
         definition: d.definition,
         example: d.example,
+        key: Math.random(),
       });
     });
     dictionary.meanings.push(meaning);
