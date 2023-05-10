@@ -8,6 +8,7 @@ import Dictionary from './pages/Dictionary';
 import Idioms from './pages/Idioms';
 import Vocabulary from './pages/Vocabulary';
 import ScrollToTop from './components/ScrollToTop';
+import Quizzes from './pages/Qiuzzes';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <Route path="/dictionary" element={<Dictionary />} />
         <Route path="/idioms" element={<Idioms />} />
         <Route path="/vocabulary" element={<Vocabulary />} />
+        <Route path="/quizzes" element={<Quizzes />} />
       </Routes>
     </Router>
   </React.StrictMode>
