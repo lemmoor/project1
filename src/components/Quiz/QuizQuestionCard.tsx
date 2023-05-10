@@ -14,7 +14,7 @@ function QuizQuestionCard({ setPoints, id }: QuizQuestionCardProps) {
   };
 
   return (
-    <div className="bg-neutral mt-4 p-8 rounded-xl border-base-content border-opacity-50 border-2">
+    <div className="bg-base-300 mt-4 p-8 rounded-xl border-base-content border-opacity-50 border-2">
       <p className="text-center text-lg bold mb-4">Question?</p>
       <div className="form-control">
         <QuizAnswer
