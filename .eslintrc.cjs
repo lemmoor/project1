@@ -18,5 +18,6 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 0,
+    'no-nested-ternary': ['error', { maxDepth: 2 }],
   },
 };
