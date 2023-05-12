@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Definition } from '../types/Word';
+import { TranslationsContext } from '../context/translationsContext';
 
 interface DictionaryDefinitionsProps {
   definitions: Definition[];
@@ -7,6 +8,8 @@ interface DictionaryDefinitionsProps {
 
 function DictionaryDefinitions({ definitions }: DictionaryDefinitionsProps) {
   const [isListOpen, setIsListOpen] = useState(false);
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
   const n = 3;
 
   function showList(list: Definition[]) {
@@ -29,7 +32,7 @@ function DictionaryDefinitions({ definitions }: DictionaryDefinitionsProps) {
           className="btn btn-secondary btn-sm btn-wide my-2 block"
           onClick={() => setIsListOpen((prev) => !prev)}
         >
-          Show {isListOpen ? 'less' : 'more'}
+          {t.show} {isListOpen ? t.less : t.more}
         </button>
       )}
       {isListOpen && showList(definitions.slice(n))}

@@ -5,6 +5,7 @@ import { TranslationsContext } from '../context/translationsContext';
 function Nav() {
   const { currentLanguage, translations } = useContext(TranslationsContext);
   const t = translations[currentLanguage];
+
   return (
     <nav className="navbar bg-base-300 py-4">
       <div className="container">
@@ -39,13 +40,13 @@ function Nav() {
               <NavLink to="/vocabulary">{t.vocabulary}</NavLink>
             </li>
             <li>
-              <NavLink to="/idioms">Idioms</NavLink>
+              <NavLink to="/idioms">{t.idioms}</NavLink>
             </li>
             <li>
-              <NavLink to="/quizzes">Quiz</NavLink>
+              <NavLink to="/quizzes">{t.quizzes}</NavLink>
             </li>
             <li>
-              <NavLink to="/dictionary">Dictionary</NavLink>
+              <NavLink to="/dictionary">{t.dictionary}</NavLink>
             </li>
           </ul>
         </div>

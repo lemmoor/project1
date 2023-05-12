@@ -3,35 +3,40 @@ import vocabImg from '../assets/vocab-card-img.jpg';
 import dictionaryImg from '../assets/dictionary-card-img.jpg';
 import quizzImg from '../assets/quizz-card-img.jpg';
 import idiomsImg from '../assets/idioms-card-img.jpg';
+import { useContext } from 'react';
+import { TranslationsContext } from '../context/translationsContext';
 
 function PagesOverview() {
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
+
   return (
     <section className="p-4">
       <h2 className="font-bold text-center text-3xl my-8 md:text-5xl">
-        Discover more
+        {t.discoverMore}
       </h2>
       <div className="flex items-center justify-center flex-col gap-6 flex-shrink md:flex-row md:max-xl:flex-wrap md:items-stretch ">
         <PageOverviewCard
-          title="Vocabulary"
-          text="Explore the differences between American and British English with this comprehensive guide to vocabulary variations."
+          title={t.vocabulary}
+          text={t.discoverMoreCard0Text}
           imgSrc={vocabImg}
           url="/vocabulary"
         />
         <PageOverviewCard
-          title="Idioms"
-          text="Discover popular English idioms and sayings with our fun and informative guide. Learn their meanings, origins, and how to use them in everyday conversation."
+          title={t.idioms}
+          text={t.discoverMoreCard1Text}
           imgSrc={idiomsImg}
           url="/idioms"
         />
         <PageOverviewCard
-          title="Quizzes"
-          text="Test your knowledge of English language with our entertaining quizzes. Challenge yourself and compete with your friends to see who's the ultimate language expert."
+          title={t.quizzes}
+          text={t.discoverMoreCard2Text}
           imgSrc={quizzImg}
           url="/quizzes"
         />
         <PageOverviewCard
-          title="Dictionary"
-          text="Find the definitions and pronunciations of English words and phrases with our online dictionary."
+          title={t.dictionary}
+          text={t.discoverMoreCard3Text}
           imgSrc={dictionaryImg}
           url="/dictionary"
         />

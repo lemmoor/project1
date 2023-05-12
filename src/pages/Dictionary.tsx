@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { CleanedDictionary, WordResponse } from '../types/Word';
 import cleanApiData from '../utils/cleanApiData';
 import Pronunciation from '../components/Pronunciation';
 import capitalize from '../utils/utils';
 import DictionaryDefinitions from '../components/DictionaryDefintions';
+import { TranslationsContext } from '../context/translationsContext';
 // import bannerImg from '../assets/us-flags.jpg';
 
 function Dictionary() {
@@ -11,8 +12,10 @@ function Dictionary() {
   const [data, setData] = useState<CleanedDictionary | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [err, setErr] = useState('');
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
 
-  const handleClick = async (word: string) => {
+  const fetchWord = async (word: string) => {
     setIsLoading(true);
     setData(null);
     setErr('');
@@ -60,7 +63,7 @@ function Dictionary() {
         <button
           type="button"
           className="btn btn-ghost btn-square absolute right-0"
-          onClick={() => handleClick(searchedWord)}
+          onClick={() => fetchWord(searchedWord)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -110,11 +113,7 @@ function Dictionary() {
         </section>
       ) : (
         !isLoading &&
-        !err && (
-          <p className="text-center mt-4">
-            Search for a word to get its definitions and pronunciations
-          </p>
-        )
+        !err && <p className="text-center mt-4">{t.dictionatyMessage}</p>
       )}
     </main>
   );
