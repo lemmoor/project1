@@ -53,7 +53,7 @@ function Dictionary() {
       <div className="max-w-xl mx-auto relative">
         <input
           type="text"
-          placeholder="Search"
+          placeholder={t.search}
           className="input input-bordered w-full pr-12"
           onChange={(e) => {
             setSearchedWord(e.target.value);
