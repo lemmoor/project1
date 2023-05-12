@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { TranslationsContext } from '../context/translationsContext';
 
 function Nav() {
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
   return (
     <nav className="navbar bg-base-300 py-4">
       <div className="container">
@@ -32,7 +36,7 @@ function Nav() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/vocabulary">Vocabulary</NavLink>
+              <NavLink to="/vocabulary">{t.vocabulary}</NavLink>
             </li>
             <li>
               <NavLink to="/idioms">Idioms</NavLink>
