@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { TranslationsContext } from '../context/translationsContext';
 
 type PageOverviewCardProps = {
   title: string;
@@ -8,6 +10,9 @@ type PageOverviewCardProps = {
 };
 
 function PageOverviewCard({ title, text, imgSrc, url }: PageOverviewCardProps) {
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
+
   return (
     <div className="card card-bordered bg-base-300 shadow-xl w-full max-w-sm">
       <figure>
@@ -22,7 +27,7 @@ function PageOverviewCard({ title, text, imgSrc, url }: PageOverviewCardProps) {
         <p>{text}</p>
         <div className="card-actions justify-end">
           <Link to={url} className="btn btn-primary mt-3">
-            Learn more
+            {t.learnMore}
           </Link>
         </div>
       </div>
