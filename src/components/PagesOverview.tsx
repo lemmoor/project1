@@ -17,7 +17,7 @@ function PagesOverview() {
       </h2>
       <div className="flex items-center justify-center flex-col gap-6 flex-shrink md:flex-row md:max-xl:flex-wrap md:items-stretch ">
         <PageOverviewCard
-          title={t.vocabulary}
+          title={t.slang}
           text={t.discoverMoreCard0Text}
           imgSrc={vocabImg}
           url="/vocabulary"
