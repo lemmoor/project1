@@ -3,7 +3,7 @@ interface QuizAnswerProps {
   answerChosen: boolean;
   text: string;
   isCorrect: boolean;
-  id: number;
+  radioId: number;
 }
 
 function QuizAnswer({
@@ -11,13 +11,13 @@ function QuizAnswer({
   text,
   isCorrect,
   handleRadioChange,
-  id,
+  radioId,
 }: QuizAnswerProps) {
   return (
     <div className="flex align-text-bottom gap-4 mt-4">
       <input
         type="radio"
-        name={`radio-${id}`}
+        name={`radio-${radioId}`}
         className={`radio ${
           answerChosen ? (isCorrect ? 'radio-success' : 'radio-error') : ''
         } disabled:opacity-100 disabled:cursor-auto`}

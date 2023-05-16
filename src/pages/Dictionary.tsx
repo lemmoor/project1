@@ -5,7 +5,6 @@ import Pronunciation from '../components/Pronunciation';
 import capitalize from '../utils/utils';
 import DictionaryDefinitions from '../components/DictionaryDefintions';
 import { TranslationsContext } from '../context/translationsContext';
-// import bannerImg from '../assets/us-flags.jpg';
 
 function Dictionary() {
   const [searchedWord, setSearchedWord] = useState('');
@@ -86,7 +85,7 @@ function Dictionary() {
       {data ? (
         <section className="my-4">
           <h2 className="text-2xl font-bold mb-4">{capitalize(data.word)}</h2>
-          <div className="flex items-center gap-2 my-2">
+          <div className="flex items-center gap-2 m-2">
             {data.phonetics.map((p) => (
               <Pronunciation
                 audioSrc={p.audio}

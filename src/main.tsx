@@ -8,7 +8,7 @@ import Dictionary from './pages/Dictionary';
 import Idioms from './pages/Idioms';
 import Vocabulary from './pages/Vocabulary';
 import ScrollToTop from './components/ScrollToTop';
-import Quizzes from './pages/Qiuzzes';
+import Quizzes from './pages/Quizzes';
 import TranslationsProvider from './components/TranslationsProvider';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
