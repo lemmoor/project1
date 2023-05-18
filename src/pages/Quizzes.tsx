@@ -1,13 +1,19 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import QuizQuestionCard from '../components/Quiz/QuizQuestionCard';
-import { quizSlang } from '../components/Quiz/quiz1';
+import { quizSlang } from '../components/Quiz/quizSlang';
 import { TranslationsContext } from '../context/translationsContext';
+import { quizIdioms } from '../components/Quiz/quizIdioms';
 
 function Quizzes() {
   const [quizOpen, setQuizOpen] = useState<'slang' | 'idiom'>('slang');
   const [points, setPoints] = useState(0);
   const { currentLanguage } = useContext(TranslationsContext);
-  const quiz1 = quizSlang[currentLanguage];
+  const quizS = quizSlang[currentLanguage];
+  const quizI = quizIdioms[currentLanguage];
+
+  useEffect(() => {
+    setPoints(0);
+  }, [quizOpen]);
 
   return (
     <main className="container p-4">
@@ -28,16 +34,25 @@ function Quizzes() {
         </button>
       </div>
       <section>
-        {quiz1.map((question) => {
-          return (
-            <QuizQuestionCard
-              setPoints={setPoints}
-              data={question}
-              key={question.id}
-            />
-          );
-        })}
-        {/* <QuizQuestionCard setPoints={setPoints} id={1} /> */}
+        {quizOpen == 'slang'
+          ? quizS.map((question) => {
+              return (
+                <QuizQuestionCard
+                  setPoints={setPoints}
+                  data={question}
+                  key={question.id}
+                />
+              );
+            })
+          : quizI.map((question) => {
+              return (
+                <QuizQuestionCard
+                  setPoints={setPoints}
+                  data={question}
+                  key={question.id}
+                />
+              );
+            })}
         <p>Your points: {points} </p>
       </section>
     </main>

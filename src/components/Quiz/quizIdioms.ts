@@ -1,41 +1,41 @@
-const quizSlangEn = [
+const quizIdiomsEN = [
   {
-    id: 11,
-    question: 'question EN?',
+    id: 110,
+    question: 'question EN idiom?',
     answers: [
       {
-        id: 1,
+        id: 10,
         answer: 'text 1',
         isCorrect: false,
       },
       {
-        id: 2,
+        id: 20,
         answer: 'text 2',
         isCorrect: false,
       },
       {
-        id: 3,
+        id: 30,
         answer: 'text 3',
         isCorrect: true,
       },
     ],
   },
   {
-    id: 12,
-    question: 'question 2 EN?',
+    id: 120,
+    question: 'question 2 EN Idiom?',
     answers: [
       {
-        id: 4,
+        id: 40,
         answer: 'text 3',
         isCorrect: true,
       },
       {
-        id: 5,
+        id: 50,
         answer: 'text 4',
         isCorrect: false,
       },
       {
-        id: 6,
+        id: 60,
         answer: 'text 6',
         isCorrect: false,
       },
@@ -43,44 +43,44 @@ const quizSlangEn = [
   },
 ];
 
-const quizSlangPL = [
+const quizIdiomsPL = [
   {
-    id: 11,
-    question: 'question PL?',
+    id: 110,
+    question: 'question PL? idiom',
     answers: [
       {
-        id: 1,
+        id: 10,
         answer: 'text 1',
         isCorrect: false,
       },
       {
-        id: 2,
+        id: 20,
         answer: 'text 2',
         isCorrect: false,
       },
       {
-        id: 3,
+        id: 30,
         answer: 'text 3',
         isCorrect: true,
       },
     ],
   },
   {
-    id: 12,
-    question: 'question 2 PL?',
+    id: 120,
+    question: 'question 2 PL? idiom',
     answers: [
       {
-        id: 4,
+        id: 40,
         answer: 'text 3',
         isCorrect: true,
       },
       {
-        id: 5,
+        id: 50,
         answer: 'text 4',
         isCorrect: false,
       },
       {
-        id: 6,
+        id: 60,
         answer: 'text 6',
         isCorrect: false,
       },
@@ -88,9 +88,9 @@ const quizSlangPL = [
   },
 ];
 
-export const quizSlang = {
-  en: quizSlangEn,
-  pl: quizSlangPL,
+export const quizIdioms = {
+  en: quizIdiomsEN,
+  pl: quizIdiomsPL,
 } as {
-  [key: string]: typeof quizSlangEn;
+  [key: string]: typeof quizIdiomsEN;
 };
