@@ -6,6 +6,7 @@
   "show": "Show",
   "more": "more",
   "less": "less",
+  "couldntFindWord": "Couldn't find this word",
   "learnMore": "Learn more",
   "heroText": "A website comparing English slang and idioms",
   "discoverMore": "Discover more",
@@ -41,5 +42,6 @@
   "AmericanSlangCurveBall": "Something tricky or unexpected, like trying to hit a curve ball in baseball.",
   "AmericanSlangDitch": "To leave a place or person unexpectedly, or to not show up to prior plans.",
   "AmericanSlangHaveDibsOn": "A right to have or get something from someone, or to use something.",
-  "Sources": "Sources"
+  "Sources": "Sources",
+  "YourPoints": "Your points"
 }

@@ -6,7 +6,7 @@ import './index.css';
 import Nav from './components/Nav';
 import Dictionary from './pages/Dictionary';
 import Idioms from './pages/Idioms';
-import Vocabulary from './pages/Vocabulary';
+import Slang from './pages/Slang';
 import ScrollToTop from './components/ScrollToTop';
 import Quizzes from './pages/Quizzes';
 import TranslationsProvider from './components/TranslationsProvider';
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="/" element={<Home />} />
           <Route path="/dictionary" element={<Dictionary />} />
           <Route path="/idioms" element={<Idioms />} />
-          <Route path="/vocabulary" element={<Vocabulary />} />
+          <Route path="/slang" element={<Slang />} />
           <Route path="/quizzes" element={<Quizzes />} />
         </Routes>
       </TranslationsProvider>

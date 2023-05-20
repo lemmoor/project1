@@ -2,13 +2,13 @@ import { useContext } from 'react';
 import { TranslationsContext } from '../context/translationsContext';
 import Footer from '../components/Footer';
 
-function Vocabulary() {
+function Slang() {
   const { currentLanguage, translations } = useContext(TranslationsContext);
   const t = translations[currentLanguage];
 
   return (
     <>
-      <main className="container p-4">
+      <main className="container p-4 my-4">
         <p>{t.SlangIntro}</p>
         <hr className="bg-primary h-[2px] border-0 my-2" />
         <h2 className="text-xl mt-6 font-bold">British English</h2>
@@ -30,7 +30,7 @@ function Vocabulary() {
           </li>
           <li className="pl-1 mt-2">
             <p className="font-bold">Bodged</p>
-            <p>{t.BritishSlangBodged}.</p>
+            <p>{t.BritishSlangBodged}</p>
             <p className="text-info-content italic pl-2">
               I tried to fix the door handle myself, but I ended up bodging it.
             </p>
@@ -152,4 +152,4 @@ function Vocabulary() {
   );
 }
 
-export default Vocabulary;
+export default Slang;

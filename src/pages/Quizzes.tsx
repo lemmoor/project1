@@ -7,7 +7,8 @@ import { quizIdioms } from '../components/Quiz/quizIdioms';
 function Quizzes() {
   const [quizOpen, setQuizOpen] = useState<'slang' | 'idiom'>('slang');
   const [points, setPoints] = useState(0);
-  const { currentLanguage } = useContext(TranslationsContext);
+  const { currentLanguage, translations } = useContext(TranslationsContext);
+  const t = translations[currentLanguage];
   const quizS = quizSlang[currentLanguage];
   const quizI = quizIdioms[currentLanguage];
 
@@ -16,7 +17,7 @@ function Quizzes() {
   }, [quizOpen]);
 
   return (
-    <main className="container p-4">
+    <main className="container p-4 my-4">
       <div className="btn-group mx-auto block w-fit">
         <button
           type="button"
@@ -53,7 +54,9 @@ function Quizzes() {
                 />
               );
             })}
-        <p>Your points: {points} </p>
+        <p className="mt-8 font-semibold text-lg text-center">
+          {t.YourPoints}: {points}
+        </p>
       </section>
     </main>
   );

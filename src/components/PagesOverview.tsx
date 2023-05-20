@@ -20,7 +20,7 @@ function PagesOverview() {
           title={t.slang}
           text={t.discoverMoreCard0Text}
           imgSrc={vocabImg}
-          url="/vocabulary"
+          url="/slang"
         />
         <PageOverviewCard
           title={t.idioms}

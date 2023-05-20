@@ -40,7 +40,7 @@ function Dictionary() {
       setData(cleanApiData(result[0]));
     } catch (e) {
       if (e instanceof Error) {
-        setErr(`Couldnt find this word`);
+        setErr(`Couldn't find this word`);
       }
     } finally {
       setIsLoading(false);
@@ -50,7 +50,7 @@ function Dictionary() {
 
   return (
     <>
-      <main className="container p-4 h-[calc(100vh-13.5rem)]">
+      <main className="container p-4 min-h-[calc(100vh-13.5rem)] my-4">
         <div className="max-w-xl mx-auto relative">
           <input
             type="text"
@@ -82,7 +82,7 @@ function Dictionary() {
             </svg>
           </button>
           {isLoading && <p className="text-center mt-4">Loading..</p>}
-          {err && <p className="text-center mt-4">{err}</p>}
+          {err && <p className="text-center mt-4">{t.couldntFindWord}</p>}
         </div>
         {data ? (
           <section className="my-4">

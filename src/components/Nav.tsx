@@ -38,7 +38,7 @@ function Nav() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/vocabulary">{t.slang}</NavLink>
+              <NavLink to="/slang">{t.slang}</NavLink>
             </li>
             <li>
               <NavLink to="/idioms">{t.idioms}</NavLink>

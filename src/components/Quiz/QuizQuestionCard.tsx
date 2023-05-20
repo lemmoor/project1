@@ -24,8 +24,8 @@ function QuizQuestionCard({ setPoints, data }: QuizQuestionCardProps) {
   };
 
   return (
-    <div className="bg-base-300 mt-4 p-8 rounded-xl border-base-content border-opacity-50 border-2">
-      <p className="text-center text-lg bold mb-4">{data.question}</p>
+    <div className="bg-base-300 mt-6 p-10 rounded-xl border-base-content border-opacity-50 border-2 max-w-2xl mx-auto">
+      <p className="text-center text-lg font-medium mb-4">{data.question}</p>
       <div className="form-control">
         {data.answers.map((a) => {
           return (

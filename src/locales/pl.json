@@ -7,8 +7,9 @@
   "more": "więcej",
   "less": "mniej",
   "learnMore": "Więcej",
+  "couldntFindWord": "Nie udało się znałeźć słowo",
   "heroText": "Strona porównująca angielski slang i idiomy",
-  "discoverMore": "Odkryj więcej",
+  "discoverMore": "Zobacz więcej",
   "discoverMoreCard0Text": "Dowiedz się o popularnych słowach slangowych używanych w amerykańskim i brytyjskim angielskim.",
   "discoverMoreCard1Text": "Odkryj często używane idiomy w brytyjskim i amerykańskim angielskim.",
   "discoverMoreCard2Text": "Sprawdź swoją znajomość angielskiego slangu i idiomów za pomocą quizów.",
@@ -29,7 +30,7 @@
   "SlangIntro": "Slang to nieformalne słownictwo, które często pojawia się w codziennych rozmowach. Tutaj znajdziesz kilka popularnych brytyjskich i amerykańskich słów slangowych, których możesz użyć aby brzmieć jak rodzimy użytkownik języka.",
   "BritishSlangMate": "Slang brytyjski oznaczający \"przyjaciel\". Podobne do \"dude\" w amerykańskim angielskim.",
   "BritishSlangCheeky": "zawadiacki, zuchwały, bezczelny.",
-  "BritishSlangBodged": "Sartaczyć. Używane do opisania czegoś, zwykle pracy, która jest wykonana źle.",
+  "BritishSlangBodged": "Spartaczyć. Używane do opisania czegoś, zwykle pracy, która jest wykonana źle.",
   "BritishSlangGutted": "Bardzo rozczarowany lub zmartwiony.",
   "BritishSlangQuid": "Słowo slangowe oznaczające \"funt\".",
   "BritishSlangKnackered": "Bardzo zmęczony, wyczerpany.",
@@ -41,5 +42,6 @@
   "AmericanSlangCurveBall": "Coś podstępnego lub nieoczekiwanego, jak próba uderzenia podkręconej piłki w baseballu.",
   "AmericanSlangDitch": "Opuszczenie miejsca lub osoby niespodziewanie lub niepojawienie się na wcześniejsze plany.",
   "AmericanSlangHaveDibsOn": "Mieć prawo do posiadania lub otrzymania czegoś, zaklepać coś sobie.",
-  "Sources": "Źródła"
+  "Sources": "Źródła",
+  "YourPoints": "Zdobyte punkty"
 }
