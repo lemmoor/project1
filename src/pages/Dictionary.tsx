@@ -84,38 +84,45 @@ function Dictionary() {
           {isLoading && <p className="text-center mt-4">Loading..</p>}
           {err && <p className="text-center mt-4">{t.couldntFindWord}</p>}
         </div>
-        {data ? (
-          <section className="my-4">
-            <h2 className="text-2xl font-bold mb-4">{capitalize(data.word)}</h2>
-            <div className="flex items-center gap-2 m-2">
-              {data.phonetics.map((p) => (
-                <Pronunciation
-                  audioSrc={p.audio}
-                  lang={p.locale}
-                  key={p.key}
-                  text={p.text}
-                />
-              ))}
-            </div>
-            <hr className="bg-primary h-[2px] border-0 my-2" />
-            <div>
-              {data.meanings.map((meaning) => {
-                return (
-                  <div key={meaning.key}>
-                    <p className="font-bold mt-4 text-lg">
-                      {meaning.partOfSpeech}
-                    </p>
-                    <hr className="bg-secondary h-[2px] border-0 my-2 opacity-80" />
-                    <DictionaryDefinitions definitions={meaning.definitions} />
-                  </div>
-                );
-              })}
-            </div>
-          </section>
-        ) : (
-          !isLoading &&
-          !err && <p className="text-center mt-4">{t.dictionatyMessage}</p>
-        )}
+        {
+          data ? (
+            <section className="my-4">
+              <h2 className="text-2xl font-bold mb-4">
+                {capitalize(data.word)}
+              </h2>
+              <div className="flex items-center gap-2 m-2">
+                {data.phonetics.map((p) => (
+                  <Pronunciation
+                    audioSrc={p.audio}
+                    lang={p.locale}
+                    key={p.key}
+                    text={p.text}
+                  />
+                ))}
+              </div>
+              <hr className="bg-primary h-[2px] border-0 my-2" />
+              <div>
+                {data.meanings.map((meaning) => {
+                  return (
+                    <div key={meaning.key}>
+                      <p className="font-bold mt-4 text-lg">
+                        {meaning.partOfSpeech}
+                      </p>
+                      <hr className="bg-secondary h-[2px] border-0 my-2 opacity-80" />
+                      <DictionaryDefinitions
+                        definitions={meaning.definitions}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          ) : null
+          // ) : (
+          //   !isLoading &&
+          //   !err && <p className="text-center mt-4">{t.dictionatyMessage}</p>
+          // )
+        }
       </main>
       <Footer
         sourcesLinks={[
